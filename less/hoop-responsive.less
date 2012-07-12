@@ -1,0 +1,161 @@
+/*!
+ * Bootstrap Responsive Customizations
+ */
+
+// RESPONSIVE IMAGES
+
+.imgscale img {
+	max-width: 100%;
+	height: auto;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+	width: 100%;
+}
+
+
+.navbar-inner.nav.simple {
+	
+	background-color: #ff0000;
+	padding: 10px;
+
+}
+
+
+@media (max-width: 767px) {
+	
+body {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  // Undo negative margin on featuredwrapper
+
+.featuredwrapper {
+    margin-left: 0;
+  }
+
+.featured {
+	width: 100%;
+}
+
+
+
+}
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+@media (max-width: 480px) {
+
+}
+@media (max-width: 767px) {
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}
+@media (min-width: 768px) and (max-width: 979px) {
+
+
+
+}
+@media (max-width: 979px) {
+
+#PageBackground {
+    padding-left: 0px;
+    margin-right: 0px;
+	}
+
+// COLLAPSIBLE NAVBAR
+// ------------------
+// Nav collapse clears brand
+
+  .nav-collapse .nav > li > a {
+    margin-bottom: 2px;
+  }
+
+  .nav-collapse .nav .nav-header {
+    color: @white;
+    text-shadow: none;
+  }
+
+.navbar .nav-simple .nav-collapse .nav .active > a,
+.navbar .nav-simple .nav-collapse .nav .active > a:hover {
+	background: lighten(@navbarBackgroundHighlight, 2%);
+}
+
+
+// Nav and dropdown links in navbar
+
+  .nav-collapse .nav > li > a,
+  .nav-collapse .dropdown-menu a {
+    padding: 6px 15px;
+    font-weight: bold;
+    color: @white;
+    .border-radius(3px);
+  }
+
+}
+@media (min-width: 980px) {
+
+  .nav-collapse.collapse {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+/* Float navbar to right */
+.navbar {
+
+	float: right;
+}
+
+/* Navbar on full width */
+.navbar .nav-simple, .navbar .navbar-inner.nav-simple {
+
+	background: none;
+	background-image: none;
+	border: none;
+	box-shadow: none;
+	filter: 0;
+}
+
+/* Link text design */
+
+.navbar .nav-simple nav li a {
+
+	text-shadow: none;
+}
+
+}
+
+@media (min-width: 1200px) {
+
+/* Makes menu text a bit bigger, when on big screen */
+
+.navbar .nav-simple .nav li a {
+
+	font-size: 15px;
+}
+
+/* Style subnavigation div to match better the MainNav div */
+
+.row.subnav .nav {
+	padding-right: 30px;
+}
+
+// FEATUREDWRAPPER
+
+.featuredwrapper {
+	margin-left: -30px;
+	}
+
+.featuredwrapper > dd {
+	margin-left: 30px;
+	}
+
+.row-fluid .featuredwrapper {
+	margin-left: 0;
+	}
+
+}

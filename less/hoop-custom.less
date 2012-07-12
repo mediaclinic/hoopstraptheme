@@ -1,0 +1,155 @@
+// HOOP CUSTOMS
+// ---------------
+
+html {
+	height:100%;
+	margin-bottom:0.1px;
+}
+
+body {
+}
+
+#PageBackground {
+	display:block;
+	margin:0px auto 0px auto;
+	min-height:100%;
+	min-width:100%;
+	padding:0;
+	position:absolute;
+	#gradient > .radial(lighten(@gray, 99%), lighten(@gray, 55%));
+}
+// ADDITIONAL RESET
+aside {
+	margin: 0;
+	padding: 0;
+}
+
+// MAIN IMAGES TO REAL SIZE
+
+figure, .figure {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+// NAVBAR CUSTOMIZATION
+// Styles: nav-simple
+
+.navbar .nav-simple .nav .active > a,
+.navbar .nav-simple .nav .active > a:hover {
+	background: none;
+}
+
+// FRONTPAGE HERO ELEMENT
+// Set min-width to hero on frontpage
+
+.hero-unit.frontpage{
+	min-height: 300px;
+}
+
+
+// ADDITIONAL TYPOGRAPHY
+
+.subtitle {
+	
+	font-weight: normal;
+}
+
+.legals {
+	font-size: 10px;
+	text-transform: uppercase;
+}
+
+// FRONTPAGE TYPOGRAPHY
+// Featured boxes
+.thumbnails.frontpage {
+	text-align: center;
+}
+
+.thumbnails.frontpage .featuredinfo{
+	color: @blue;
+}
+
+
+// ADDITIONAL LAYOUT CSS
+
+// PageInfo is the last element on the page - usually contains some copyright information.
+
+.pageinfo {
+	color: @grayLight;
+	text-align: center;
+}
+
+.MainImage {
+	padding: 0;
+	margin: 0;
+}
+
+// SLIDER IMAGE SCALING FIX
+
+img.sliderimage {
+	max-width: 100%;
+	width: 100%;
+}
+
+// FEATURED
+// ----------
+// Note: `.featuredwrapper` and `.featuredwrapper > dd` are overriden in responsive files
+
+// Make wrapper dl behave like the grid
+.featuredwrapper {
+	margin-left: -@gridGutterWidth;
+	list-style: none;
+	.clearfix();
+}
+// Fluid rows have no left margin
+.row-fluid .featuredwrapper {
+	margin-left: 0;
+}
+
+// Float dd to make thumbnails appear in a row
+.featuredwrapper > dd {
+	float: left; // Explicity set the float since we don't require .span* classes
+	margin-bottom: @baseLineHeight;
+	margin-left: @gridGutterWidth;
+}
+
+// The actual thumbnail (can be `a` or `div`)
+.featured {
+	display: block;
+	padding: 4px;
+	line-height: 1;
+	border: 1px solid @grayLighter;
+	.border-radius(4px);
+	.box-shadow(0 1px 1px rgba(0,0,0,.075));
+}
+// Add a hover state for linked versions only
+a.featured:hover {
+	border-color: @linkColor;
+	.box-shadow(0 1px 4px rgba(0,105,214,.25));
+}
+
+// Images and captions
+.featured > img {
+	display: block;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.featured .caption {
+	padding: 9px;
+}
+
+
+// HR ELEMENT DESIGN
+
+/* Faded out hr */
+hr.soften {
+  height: 1px;
+  margin: 54px 0;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
+  border: 0;
+}
