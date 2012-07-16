@@ -1,27 +1,32 @@
 <div id="Sidebar">
+
 	<div class="sidebarBox">
- 		<h4>
+		<h4>
 			<% loop Level(1) %>
+
 				$Title
+	
 			<% end_loop %>
+ 
   		</h4>
   		
-  		<ul id="Menu2">
+		<dl id="Menu2">
 
 		  	<% loop Menu(2) %>
 
   	    		<% if Children %>
 	
-			  	    <li class="$LinkingMode">
+			  	    <dt class="$LinkingMode">
 
-						<a href="$Link" title="Go to the $Title.XML page" class="$LinkingMode levela">
-							<span><em>$MenuTitle.XML</em></span>
+						<a href="$Link" title="Go to the $Title.XML page" class="$LinkingMode levela"><span><em>$MenuTitle.XML</em></span>
 						</a>
 
-					<% else %>
-			  			<li><a href="$Link" title="Go to the $Title.XML page" class="$LinkingMode levela">
-							<span><em>$MenuTitle.XML</em></span>
-							</a>
+				<% else %>
+
+		  			<dt>
+
+						<a href="$Link" title="Go to the $Title.XML page" class="$LinkingMode levela"><span><em>$MenuTitle.XML</em></span>
+						</a>
 
 				<% end_if %>	  
 	  		
@@ -29,32 +34,33 @@
 	
 	  				<% if Children %>
 
-						<ul class="sub">
+						<dl class="sub">
 	
-							<li>
+							<dt>
 
-								<ul class="roundWhite">
+								<dl class="roundWhite">
 
 									<% loop Children %>
 
-										<li><a href="$Link" title="Go to the $Title.XML page" class="$LinkingMode levelb"><span><em>$MenuTitle.XML</em></span></a></li>
+										<dt><a href="$Link" title="Go to the $Title.XML page" class="$LinkingMode levelb"><span><em>$MenuTitle.XML</em></span></a></dt>
 
 									<% end_loop %>
 
-								</ul>
+								</dl>
 
-							</li>
+							</dt>
 
-						</ul>
+						</dl>
 
 			 		 <% end_if %>
 
 				<% end_if %> 
-			</li>
+	
+				</dt>
 
   			<% end_loop %>
 
-  		</ul>
+		</dl>
 	
 	</div> <!-- sidebarBox end -->
 
