@@ -1,4 +1,4 @@
-<% if SiteConfig.GoogleAnalyticsID %>		
+<% if $SiteConfig.GoogleAnalyticsID %>		
 
 	if(Director::isLive()){
 

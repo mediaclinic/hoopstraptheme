@@ -1,5 +1,5 @@
-<% if GetFooter %>
-	<% loop GetFooter %>
+<% if $GetFooter %>
+	<% loop $GetFooter %>
 	
 		<footer class="footer">
 	

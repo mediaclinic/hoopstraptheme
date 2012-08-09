@@ -8,11 +8,13 @@
 
 				<hgroup>			
 
-					<div class="hero-unit frontpage"<% if HeroBackgroundImage %>style="background: url($HeroBackgroundImage.URL) no-repeat 100% 50%";<% end_if %>>
+					<div class="hero-unit frontpage"<% if $HeroBackgroundImage %>style="background: url($HeroBackgroundImage.URL) no-repeat 100% 50%";<% end_if %>>
+		
 							<h1 class="heropagename">$HeroTitle</h1>
-							<% if Subtitle %><h2 class="herosubtitle">$Subtitle</h2><% end_if %>
-							<% if HeroContent %><p class="herocontent">$HeroContent</p><% end_if %>
-							<% if HeroButtonTxt %><p><a href="$HeroLinkLoc.Link" class="btn btn-primary btn-large">$HeroButtonTxt</a></p><% end_if %>
+							<% if $Subtitle %><h2 class="herosubtitle">$Subtitle</h2><% end_if %>
+							<% if $HeroContent %><p class="herocontent">$HeroContent</p><% end_if %>
+							<% if $HeroButtonTxt %><p><a href="$HeroLinkLoc.Link" class="btn btn-primary btn-large">$HeroButtonTxt</a></p><% end_if %>
+	
 					</div>
 
 				</hgroup>
@@ -30,18 +32,23 @@
 				<dl class="featuredwrapper frontpage">
 					<dd class="span3">
 						<div class="featured">	
-							<% if Featured1Title %>
+		
+							<% if $Featured1Title %>
 								<h4 class="featuredtitle"><a href="$Link1Loc.Link">$Featured1Title</a></h4>
 							<% end_if %>
-							<% if Featured1Image %>
-								<a href="$Link1Loc.Link">$Featured1Image.SetWidth(128)</a>
+		
+							<% if $Featured1Image %>
+								<a href="$Link1Loc.Link">$Featured1Image.SetWidth(270)</a>
 							<% end_if %>
-							<% if Featured1 %>
+		
+							<% if $Featured1 %>
 								<p>$Featured1</p>
 							<% end_if %>
-							<% if Featured1Info %>
-								<span class="label label-info">$Featured1Info</span>
+		
+							<% if $Featured1Info %>
+								<a href="$Link1Loc.Link"><span class="btn btn-primary">$Featured1Info</span></a>
 							<% end_if %>
+		
 						</div>
 					</dd>
 				</dl>
@@ -53,18 +60,23 @@
 				<dl class="featuredwrapper frontpage">
 					<dd class="span3">
 						<div class="featured">	
-							<% if Featured2Title %>
+	
+							<% if $Featured2Title %>
 								<h4 class="featuredtitle"><a href="$Link2Loc.Link">$Featured2Title</a></h4>
 							<% end_if %>
-							<% if Featured2Image %>
-								<a href="$Link2Loc.Link">$Featured2Image.SetWidth(128)</a>
+	
+							<% if $Featured2Image %>
+								<a href="$Link2Loc.Link">$Featured2Image.SetWidth(270)</a>
 							<% end_if %>
-							<% if Featured2 %>
+	
+							<% if $Featured2 %>
 								<p>$Featured2</p>
 							<% end_if %>
-							<% if Featured2Info %>
-								<span class="label label-info">$Featured2Info</span>
+	
+							<% if $Featured2Info %>
+								<a href="$Link2Loc.Link"><span class="btn btn-primary">$Featured2Info</span></a>
 							<% end_if %>
+	
 						</div>
 					</dd>
 				</dl>
@@ -76,17 +88,21 @@
 				<dl class="featuredwrapper frontpage">
 					<dd class="span3">
 						<div class="featured">	
-							<% if Featured3Title %>
+	
+							<% if $Featured3Title %>
 								<h4 class="featuredtitle"><a href="$Link3Loc.Link">$Featured3Title</a></h4>
 							<% end_if %>
-							<% if Featured3Image %>
-								<a href="$Link3Loc.Link">$Featured3Image.SetWidth(128)</a>
+	
+							<% if $Featured3Image %>
+								<a href="$Link3Loc.Link">$Featured3Image.SetWidth(270)</a>
 							<% end_if %>
-							<% if Featured3 %>
+	
+							<% if $Featured3 %>
 								<p>$Featured3</p>
 							<% end_if %>
-							<% if Featured3Info %>
-								<span class="label label-info">$Featured3Info</span>
+
+							<% if $Featured3Info %>
+								<a href="$Link3Loc.Link"><span class="btn btn-primary">$Featured3Info</span></a>
 							<% end_if %>
 						</div>
 					</dd>
@@ -99,18 +115,23 @@
 				<dl class="featuredwrapper frontpage">
 					<dd class="span3">
 						<div class="featured">	
-							<% if Featured4Title %>
+
+							<% if $Featured4Title %>
 								<h4 class="featuredtitle"><a href="$Link4Loc.Link">$Featured4Title</a></h4>
 							<% end_if %>
-							<% if Featured4Image %>
-								<a href="$Link4Loc.Link">$Featured4Image.SetWidth(128)</a>
+
+							<% if $Featured4Image %>
+								<a href="$Link4Loc.Link">$Featured4Image.SetWidth(270)</a>
 							<% end_if %>
-							<% if Featured4 %>
+
+							<% if $Featured4 %>
 								<p>$Featured4</p>
 							<% end_if %>
-							<% if Featured4Info %>
-								<span class="label label-info">$Featured4Info</span>
+
+							<% if $Featured4Info %>
+								<a href="$Link4Loc.Link"><span class="btn btn-primary">$Featured4Info</span></a>
 							<% end_if %>
+
 						</div>
 					</dd>
 				</dl>

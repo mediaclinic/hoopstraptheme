@@ -29,39 +29,59 @@
 
 <body data-spy="scroll" data-target=".subnav" data-offset="50" class="custom">
 
-	<div id="PageBackground" class="$ClassName $URLSegment png">
+	<div id="PageBackground" class="$ClassName $URLSegment png"> <!-- Used as full background over body -->
 
-		<div class="container">
-	
-			<% include Top %>
-							
-			<% include Header %>
-			
-			<% include SubNav %>
-
-				<% if Level(3) %>
+		<div id="UpperBackground">     <!-- Used to design background till Footer -->
 		
-					<ul class="breadcrumb">
-			
-					<li>$Breadcrumbs</li>
-			
-					</ul>
+			<div id="UpperBackgroundFX">   <!-- Used to design background till Footer with layer 2 -->
 	
-				<% else_if IsInsideHolder = true %>
+				<div class="container">
+			
+					<% include Top %>
+									
+					<% include Header %>
+					
+					<% include SubNav %>
+		
+						<% if Level(3) %>
+				
+							<ul class="breadcrumb">
+					
+							<li>$Breadcrumbs</li>
+					
+							</ul>
+			
+						<% else_if $IsInsideHolder = true %>
+			
+						<% else %>
+		
+					<% end_if %>
+			
+					$Layout
+			
+				</div> <!-- End container -->
 	
-				<% else %>
+			</div> <!-- End UpperBackgroundFX -->
 
-			<% end_if %>
-	
-			$Layout
-	
-			<% include Footer %>
-	
-			<% include Pageinfo %>
-	
-		</div>
-	
-	</div>
+		</div> <!-- End UpperBackground -->
+
+		<div id="FooterWrapper">   <!-- Design for Footer -->
+		
+			<footer class="footer">
+			
+				<div class="container">
+			
+					<% include Footer %>
+						
+					<% include Pageinfo %>		
+						
+				</div>
+				
+			</footer>
+			
+		</div> <!-- End FooterWrapper -->
+
+	</div> <!-- End PageBackground -->
 
 </body>
 </html>

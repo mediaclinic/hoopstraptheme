@@ -9,15 +9,15 @@
 				<hgroup>			
 
 					<h1 class="pagename">$Title</h1>
-					<% if Subtitle %><h2 class="subtitle">$Subtitle</h2><% end_if %>
+					<% if $Subtitle %><h2 class="subtitle">$Subtitle</h2><% end_if %>
 
 				</hgroup>
 
-				<% if IntroTxtBefore %><p class="lead">$IntroTxtBefore</p><% end_if %>
+				<% if $IntroTxtBefore %><p class="lead">$IntroTxtBefore</p><% end_if %>
 		
-				<% if MainImage %><div class="imgscale"><figure>$MainImage.SetWidth(1170)</figure></div><% end_if %>
+				<% if $MainImage %><div class="imgscale"><figure>$MainImage.SetWidth(1170)</figure></div><% end_if %>
 
-				<% if IntroTxtAfter %><p class="lead">$IntroTxtAfter</p><% end_if %>
+				<% if $IntroTxtAfter %><p class="lead">$IntroTxtAfter</p><% end_if %>
 
 			</header>
 
@@ -50,8 +50,8 @@
 		
 			<footer>	
 			
-				<% if Author %><p class="articleauthor">$Author</p><% end_if %>
-				<% if Date %><p class="articledate">$Date.format(j.n.Y)</p><% end_if %>
+				<% if $Author %><p class="articleauthor">$Author</p><% end_if %>
+				<% if $Date %><p class="articledate">$Date.format(j.n.Y)</p><% end_if %>
 			
 			</footer>
 

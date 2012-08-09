@@ -8,12 +8,16 @@
 	
 	$Content
 	$Form
-	<% if PageComments %><section>$PageComments</section><% end_if %>
+
+	<% if $PageComments %><section>$PageComments</section><% end_if %>
 
 </div>
 
 <% if Menu(2) %>
+
 	<div class="container_16 grid_2">
 	<% include SideNavi %>
+
 	</div>	
+
 <% end_if %>

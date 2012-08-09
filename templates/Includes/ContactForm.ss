@@ -1,10 +1,10 @@
-<% if IncludeFormTag %>
+<% if $IncludeFormTag %>
 
 	<form $FormAttributes class="form-horizontal">
 
 <% end_if %>
 
-<% if Message %>
+<% if $Message %>
 
 	<p id="{$FormName}_error" class="message $MessageType">$Message</p>
 
@@ -16,9 +16,9 @@
 	
 <fieldset>
 
-	<% if Legend %><legend>$Legend</legend><% end_if %> 
+	<% if $Legend %><legend>$Legend</legend><% end_if %> 
 	
-	<% loop Fields %>
+	<% loop $Fields %>
 		$FieldHolder
 	<% end_loop %>
 
@@ -26,11 +26,11 @@
 
 	</fieldset>
 
-	<% if Actions %>
+	<% if $Actions %>
 
 		<div class="Actions">
 
-			<% loop Actions %>
+			<% loop $Actions %>
 
 				$Field
 
@@ -40,7 +40,7 @@
 
 	<% end_if %>
 
-<% if IncludeFormTag %>
+<% if $IncludeFormTag %>
 
 	</form>
 

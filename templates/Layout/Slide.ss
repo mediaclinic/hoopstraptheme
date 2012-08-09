@@ -1,1 +1,1 @@
-<img src="$SlideImage.URL" <% if SlideTxtDisplay=On %>title="<% if Title %><h1>$Title</h1><% end_if %> <% if Subtitle %><h2>$Subtitle</h2><% end_if %> <% if SlideContent %>$SlideContent"<% end_if %><% end_if %> data-transition="$SlideEffect" />
+<img src="$SlideImage.URL" <% if $SlideTxtDisplay=On %>title="<% if $Title %><h1>$Title</h1><% end_if %> <% if $Subtitle %><h2>$Subtitle</h2><% end_if %> <% if $SlideContent %>$SlideContent"<% end_if %><% end_if %> data-transition="$SlideEffect" />

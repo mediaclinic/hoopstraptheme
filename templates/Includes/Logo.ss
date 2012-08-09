@@ -1,6 +1,6 @@
-<% if GetLogo %>
+<% if $GetLogo %>
 
-	<% loop GetLogo %>
+	<% loop $GetLogo %>
 								
 		$Logo.SetWidth(180)
 		

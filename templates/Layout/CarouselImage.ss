@@ -2,7 +2,7 @@
 	
 	<img class="sliderimage" src="$SlideImage.URL" alt=""/>
 
-	<% if SlideContent %>
+	<% if $SlideContent %>
 		<div class="carousel-caption">
 			$SlideContent
 		</div>

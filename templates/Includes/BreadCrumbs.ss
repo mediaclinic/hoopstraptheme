@@ -2,7 +2,7 @@
 
 	<p> LEVEL 2 </p>
 
-<% else_if IsInsideHolder = true %>
+<% else_if $IsInsideHolder = true %>
 
 	<p> IS INSIDE HOLDER </p>
 	

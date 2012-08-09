@@ -45,11 +45,11 @@
 		
 				</hgroup>
 		
-				<% if IntroTxtBefore %><p class="lead">$IntroTxtBefore</p><% end_if %>
+				<% if $IntroTxtBefore %><p class="lead">$IntroTxtBefore</p><% end_if %>
 				
-				<% if MainImage %><div class="imgscale"><figure>$MainImage.SetWidth(1170)</figure></div><% end_if %>	
+				<% if $MainImage %><div class="imgscale"><figure>$MainImage.SetWidth(1170)</figure></div><% end_if %>	
 		
-				<% if IntroTxtAfter %><p class="lead">$IntroTxtAfter</p><% end_if %>
+				<% if $IntroTxtAfter %><p class="lead">$IntroTxtAfter</p><% end_if %>
 		
 			</div>
 

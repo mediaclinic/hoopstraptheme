@@ -1,6 +1,6 @@
 <div class="row subnav">
 
-	<% if IsInsideHolder != Children %>
+	<% if $IsInsideHolder != Children %>
 
 		<div class="span12">
 
@@ -16,7 +16,7 @@
 
 		</div>
 
-	<% else_if SliderHolder != Children %>	
+	<% else_if $SliderHolder != Children %>	
 
 		<div class="span12">
 

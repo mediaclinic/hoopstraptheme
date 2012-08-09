@@ -4,9 +4,9 @@
 
 		<header>		
 		
-			<% if GetLogo %>
+			<% if $GetLogo %>
 			
-				<% loop GetLogo %>
+				<% loop $GetLogo %>
 											
 					<span class="brand">$Logo.SetWidth(180)</span>
 					
