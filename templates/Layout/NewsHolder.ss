@@ -1,36 +1,28 @@
-<div class="container_16 grid_10">
+<div class="row">
+
+	<div class="span12">
 
 	<% if Level(2) %>
-
 	  	<% include BreadCrumbs %>
-
 	<% end_if %>
 
 	<h1>$Title</h1>
 	
 	$Content
+	
+	</div>
+	
+	<div class="span12">
 
     <ul id="NewsList">
-
         <% loop Children %>
-
-            <li><h1><a href="$Link" title="Read more on &quot;{$Title}&quot;">$Title</a></h1></li>
-            <li class="newsDateTitle small">$Date.Nice</li>
-            <li class="newsSummary">$Content.FirstParagraph <a href="$Link" title="Read more on &quot;{$Title}&quot;"><% _t('READMORE', 'Read more') %> &raquo;</a></li>
-			<li class="empty"><p></p></li>
-
+            <li><h3><a href="$Link" title="Read more on &quot;{$Title}&quot;">$Title</a></h3>
+            <div class="newsDateTitle small">$Date.Nice</div>
+            <div class="newsSummary">$Content.LimitWordCount(6) <a href="$Link" title="Read more on &quot;{$Title}&quot;"><% _t('Content.READMORE', 'Read more') %> &raquo;</a></div>
+			<div class="empty"><p></p></div></li>
         <% end_loop %>
-
     </ul>
+	
+	</div>
 
 </div>
-
-<% if Menu(2) %>
-
-	<div class="container_16 grid_5 padding_l">
-
-	<% include SideNavi %>
-
-	</div>	
-
-<% end_if %>

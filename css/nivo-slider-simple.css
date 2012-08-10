@@ -66,14 +66,13 @@ SIMPLE SKIN TO BE RESPONSIBLE FOR BOOTSTRAP || NIVOSLIDER
 }
 
 .theme-hoop-simple .nivo-caption {
-    font-family: Helvetica, Arial, sans-serif;
 }
+.theme-hoop-simple .nivo-caption h1 {
+}
+
 .theme-hoop-simple .nivo-caption a {
-    color:#fff;
-    border-bottom:1px dotted #fff;
 }
 .theme-hoop-simple .nivo-caption a:hover {
-    color:#fff;
 }
 
 .theme-hoop-simple .nivo-controlNav.nivo-thumbs-enabled {

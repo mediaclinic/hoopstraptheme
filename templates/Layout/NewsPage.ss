@@ -1,23 +1,15 @@
-<div class="container_16 grid_11 news">
+<div class="row">
 
-	<% if Level(2) %>
-	  	<% include BreadCrumbs %>
-	<% end_if %>
+	<div class="span12">
 
 	<h1>$Title</h1>
 	
 	$Content
+	
 	$Form
-
-	<% if $PageComments %><section>$PageComments</section><% end_if %>
+	<% if PageComments %><section>$PageComments</section><% end_if %>
+	
+	</div>
 
 </div>
 
-<% if Menu(2) %>
-
-	<div class="container_16 grid_2">
-	<% include SideNavi %>
-
-	</div>	
-
-<% end_if %>
