@@ -1,0 +1,21 @@
+/**
+ * This support file is used to style the WYSIWYG editor in the CMS
+ */
+
+.linkButton {
+	background-color:#CCC;
+	padding:5px 5px;
+}
+
+.intro {
+	font-size:1.5em;
+}
+
+.textHighLightRed {
+	color:@red;
+}
+
+.textHighLightGreen {
+	color:@green;
+}
+
