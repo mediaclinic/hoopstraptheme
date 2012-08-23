@@ -4,7 +4,7 @@
 		
 		<div class="span12">
 	
-			<header class="jumbotron">
+			<header>
 		
 				<hgroup>			
 		

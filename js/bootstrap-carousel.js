@@ -1,5 +1,5 @@
 /* ==========================================================
- * bootstrap-carousel.js v2.0.4
+ * bootstrap-carousel.js v2.1.0
  * http://twitter.github.com/bootstrap/javascript.html#carousel
  * ==========================================================
  * Copyright 2012 Twitter, Inc.
@@ -33,41 +33,20 @@
     this.options.pause == 'hover' && this.$element
       .on('mouseenter', $.proxy(this.pause, this))
       .on('mouseleave', $.proxy(this.cycle, this))
-      
-      
-	if ( !!this.options.pills ) {
-	this.$pills = $('<span class="carousel-pills" />').appendTo(this.$element);
-	this.pills();
-    }
   }
 
   Carousel.prototype = {
 
-	pills: function () {
-		var self = this
-			, pills = ""
-			, numImages = this.$element.find(".item").length;
-
-	for ( var i = 0; i < numImages; i += 1) {
-		pills += "<span></span>";
-	}
-
-	this.$pills.html(pills).find(":first-child").addClass("active-pill");
-	
-	this.$pills.on('click', 'span', function () {
-		var image = $(this).index();
-		self.to(image);
-		});
-	}
-
-
-,	cycle: function () {
-		this.interval = setInterval($.proxy(this.next, this), this.options.interval)
-		return this
-	}
+    cycle: function (e) {
+      if (!e) this.paused = false
+      this.options.interval
+        && !this.paused
+        && (this.interval = setInterval($.proxy(this.next, this), this.options.interval))
+      return this
+    }
 
   , to: function (pos) {
-      var $active = this.$element.find('.active')
+      var $active = this.$element.find('.item.active')
         , children = $active.parent().children()
         , activePos = children.index($active)
         , that = this
@@ -89,6 +68,10 @@
 
   , pause: function (e) {
       if (!e) this.paused = true
+      if (this.$element.find('.next, .prev').length && $.support.transition.end) {
+        this.$element.trigger($.support.transition.end)
+        this.cycle()
+      }
       clearInterval(this.interval)
       this.interval = null
       return this
@@ -105,13 +88,15 @@
     }
 
   , slide: function (type, next) {
-      var $active = this.$element.find('.active')
+      var $active = this.$element.find('.item.active')
         , $next = next || $active[type]()
         , isCycling = this.interval
         , direction = type == 'next' ? 'left' : 'right'
         , fallback  = type == 'next' ? 'first' : 'last'
         , that = this
-        , e = $.Event('slide')
+        , e = $.Event('slide', {
+            relatedTarget: $next[0]
+          })
 
       this.sliding = true
 
@@ -143,11 +128,6 @@
         this.$element.trigger('slid')
       }
 
-	if ( !!this.options.pills ) {
-	this.$pills.children().eq($next.index()).addClass("active-pill")
-		.siblings().removeClass("active-pill");
-	}
-
       isCycling && this.cycle()
 
       return this
@@ -164,9 +144,10 @@
       var $this = $(this)
         , data = $this.data('carousel')
         , options = $.extend({}, $.fn.carousel.defaults, typeof option == 'object' && option)
+        , action = typeof option == 'string' ? option : options.slide
       if (!data) $this.data('carousel', (data = new Carousel(this, options)))
       if (typeof option == 'number') data.to(option)
-      else if (typeof option == 'string' || (option = options.slide)) data[option]()
+      else if (action) data[action]()
       else if (options.interval) data.cycle()
     })
   }
@@ -174,7 +155,6 @@
   $.fn.carousel.defaults = {
     interval: 5000
   , pause: 'hover'
-  , pills: true
   }
 
   $.fn.carousel.Constructor = Carousel

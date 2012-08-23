@@ -68,7 +68,7 @@
 
 		</div>
 
-		<div class="span3">
+		<div class="span4">
 
 			<section>
 
@@ -84,7 +84,7 @@
 		
 		</div>
 
-		<div class="span5 offset1">
+		<div class="span5">
 
 				<div id="googlemap" class="gmap3"></div>
 				<div>$Column2</div>

@@ -28,7 +28,7 @@ body {
     padding-right: 0px;
   }
 
-  // Undo negative margin on featuredwrapper
+// Undo negative margin on featuredwrapper
 
 .featuredwrapper {
     margin-left: 0;
@@ -50,8 +50,8 @@ body {
 @media (max-width: 767px) {
 
 .container {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
 }
@@ -76,7 +76,7 @@ body {
   }
 
   .nav-collapse .nav .nav-header {
-    color: @white;
+    color: @gray;
     text-shadow: none;
   }
 
@@ -85,30 +85,28 @@ body {
 	background: lighten(@navbarBackgroundHighlight, 2%);
 }
 
+/* Unfloat brand */
+.navbar-fixed-top .brand {
+	float: left;
+	margin-left: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+}
 
-// Nav and dropdown links in navbar
-
-  .nav-collapse .nav > li > a,
-  .nav-collapse .dropdown-menu a {
-    padding: 6px 15px;
-    font-weight: bold;
-    color: @white;
-    .border-radius(3px);
-  }
+.slider-wrapper.theme-hoop-simple {
+	margin: 0px auto 0 auto;
+}
 
 }
 @media (min-width: 980px) {
 
-  .nav-collapse.collapse {
-    height: auto !important;
-    overflow: visible !important;
-  }
-
-/* Float navbar to right */
+/* Float navbar to right 
 .navbar {
 
 	float: right;
 }
+
+*/
 
 /* Navbar on full width */
 .navbar .nav-simple, .navbar .navbar-inner.nav-simple {
@@ -130,6 +128,18 @@ body {
 }
 
 @media (min-width: 1200px) {
+
+// Slider and Hero elements margins
+
+.hero-unit.frontpage {
+	margin-top: 20px;
+}
+
+.slider-wrapper.theme-hoop-simple{
+	margin: 40px auto 0 auto;
+}
+
+
 
 /* Makes menu text a bit bigger, when on big screen */
 

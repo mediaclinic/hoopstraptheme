@@ -27,7 +27,7 @@
 
 	</head>
 
-<body data-spy="scroll" data-target=".subnav" data-offset="50" class="custom">
+<body data-spy="scroll" data-target=".bs-docs-sidebar" class="custom">
 
 	<div id="PageBackground" class="$ClassName $URLSegment png"> <!-- Used as full background over body -->
 

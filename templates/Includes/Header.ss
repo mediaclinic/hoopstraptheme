@@ -1,27 +1,28 @@
-<div class="row">
+<div class="navbar navbar navbar-fixed-top">
 
-	<div class="span4">
+	<div class="navbar-inner">
+  
+  	
+		<div class="container">
 
-		<header>		
-		
-			<% if $GetLogo %>
-			
-				<% loop $GetLogo %>
-											
-					<span class="brand">$Logo.SetWidth(180)</span>
-					
-				<% end_loop %>
-			
-			<% end_if %>
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
 
-		</header>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+
+			</button>
 			
-	</div>
+			<header>		
+			
+				<% include Logo %>
 	
-	<div class="span8">
-		
-		<% include MainNav %>
-		
+			</header>
+
+			<% include MainNav %>
+			
+		</div>
+	
 	</div>
 
 </div>
