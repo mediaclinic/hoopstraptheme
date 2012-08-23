@@ -58,6 +58,51 @@ nav-collapse collapse {
 	background: none;
 }
 
+// Styles navbar-simple-second
+
+.navbar .navbar-simple-second {
+	background:none;
+}
+
+.navbar-simple-second {
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: @zindexFixedNavbar;
+	margin-bottom: 0; // remove 18px margin for default navbar
+}
+
+.navbar-simple-second {
+  .navbar-inner {
+    border: 0;
+  }
+}
+
+.navbar-simple-second .navbar-inner {
+  padding-left:  0;
+  padding-right: 0;
+  .border-radius(0);
+}
+
+.navbar-simple-second .container {
+  #grid > .core > .span(@gridColumns);
+}
+
+.navbar-simple-second {
+  top: 0;
+}
+
+.navbar-simple-second .navbar-inner {
+	background:none;
+	box-shadow:none;
+	min-height:400px;
+}
+
+.navbar .nav {
+	float:right;
+}
+
+
 // FRONTPAGE HERO ELEMENT
 // Set min-width to hero on frontpage
 
