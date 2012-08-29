@@ -51,59 +51,67 @@ nav-collapse collapse {
 	margin-bottom: 1em;
 }
 
-// Styles: nav-simple
-
-.navbar .nav-simple .nav .active > a,
-.navbar .nav-simple .nav .active > a:hover {
-	background: none;
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  color: @blue;
+  background:none;
+  box-shadow:none;
+  text-shadow:none;
 }
 
-// Styles navbar-simple-second
+.navbar .nav > li > a {
+	text-shadow:none;
+}
 
-.navbar .navbar-simple-second {
+.navbar .brand {
+	text-shadow:none;
+}
+
+// NAVBAR STYLE "SIMPLE", NOT FIXED
+
+.navbar-simple .navbar-inner {
+//  #gradient > .vertical(@orange, @orange); 
 	background:none;
-}
-
-.navbar-simple-second {
-	position: fixed;
+	position:static;
+	min-height:60px;
 	right: 0;
 	left: 0;
-	z-index: @zindexFixedNavbar;
-	margin-bottom: 0; // remove 18px margin for default navbar
-}
-
-.navbar-simple-second {
-  .navbar-inner {
-    border: 0;
-  }
-}
-
-.navbar-simple-second .navbar-inner {
-  padding-left:  0;
-  padding-right: 0;
-  .border-radius(0);
-}
-
-.navbar-simple-second .container {
-  #grid > .core > .span(@gridColumns);
-}
-
-.navbar-simple-second {
-  top: 0;
-}
-
-.navbar-simple-second .navbar-inner {
-	background:none;
 	box-shadow:none;
-	min-height:70px;
+	border:0;
 }
 
 .navbar .nav {
 	float:right;
+	
 }
 
+// NAVBAR STYLE "SIMPLE-FIXED", IS FIXED
 
+.navbar-simple-fixed {
+//  #gradient > .vertical(@orange, @orange); 
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: @zindexFixedNavbar;
+	margin-bottom: 0; // remove 18px margin for default navbar		
+}
 
+.navbar-simple-fixed .navbar-inner {
+	background:lighten(@orange, 10%);
+	border:0;
+}
+
+// Reset container width
+// Required here as we reset the width earlier on and the grid mixins don't override early enough
+.navbar-simple-fixed .container {
+//	.navbar-fixed-top .container;
+	width:auto;
+}
+
+.navbar-simple-fixed {
+	top:0;
+}
 
 // FRONTPAGE HERO ELEMENT
 // Set min-width to hero on frontpage
