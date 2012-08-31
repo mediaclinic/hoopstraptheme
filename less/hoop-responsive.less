@@ -12,14 +12,12 @@
 	width: 100%;
 }
 
-
 .navbar-inner.nav.simple {
 	
 	background-color: #CCC;
 	padding: 10px;
 
 }
-
 
 @media (max-width: 767px) {
 	
@@ -38,7 +36,11 @@ body {
 	width: 100%;
 }
 
-
+// Negative indent the now static "fixed" navbar
+.navbar-simple-fixed {
+    margin-left: -20px;
+    margin-right: -20px;
+}
 
 }
 @media (min-width: 768px) and (max-width: 979px) {
@@ -167,5 +169,21 @@ body {
 .row-fluid .featuredwrapper {
 	margin-left: 0;
 	}
+
+}
+
+// TABLETS AND BELOW 
+@media (max-width: @navbarCollapseWidth) {
+
+	// Unfix the navbars
+  .navbar-simple-fixed {
+    position: static;
+  }
+  .navbar-simple-fixed {
+    margin-bottom: @baseLineHeight;
+  }
+  .navbar-simple-fixed .navbar-inner {
+    padding: 5px;
+  }
 
 }

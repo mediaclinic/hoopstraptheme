@@ -56,7 +56,13 @@
 						<% else %>
 		
 					<% end_if %>
-			
+					
+					</div> <!-- Upper container ends here -->
+						
+						<% include Jumbotron %>
+							
+					<div class="container"> <!-- Content container starts here -->
+								
 					$Layout
 			
 				</div> <!-- End container -->
