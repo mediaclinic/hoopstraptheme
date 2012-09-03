@@ -1,5 +1,9 @@
-// HOOP CUSTOMS
-// ---------------
+
+///////////////////////////////////
+// CUSTOMIZED BOOTSTRAP SETTINGS //
+///////////////////////////////////
+
+// Basic body, background etc.
 
 html {
 	height:100%;
@@ -24,6 +28,7 @@ body {
 }
 
 #UpperBackgroundFX {
+	border-bottom: 1px dotted @grayLight;
 	margin:0px auto 0px auto;
 }
 
@@ -37,10 +42,6 @@ aside {
 	margin: 0;
 	padding: 0;
 }
-
-// CUSTOM VARIABLES
-
-@headerHeight:             60px;
 
 // THE GRID - DON'T TOUCH THIS IN ANY CIRCUMSTANCES OR YOU'LL GO TO HELL
 
@@ -58,6 +59,15 @@ aside {
   }
   
 }
+
+
+//////////////////////
+// CUSTOM VARIABLES //
+//////////////////////
+
+
+@headerHeight: 40px;
+
 
 // MAIN IMAGES TO REAL SIZE
 
@@ -93,7 +103,12 @@ form#SearchForm_SearchForm .action {
 	.box-shadow(~"inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)");		
 }
 
-// NAVBAR CUSTOMIZATION
+
+//////////////////////////
+// NAVBAR CUSTOMIZATION //
+//////////////////////////
+
+
 nav-collapse collapse {
 	margin-bottom: 1em;
 }
@@ -101,10 +116,10 @@ nav-collapse collapse {
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
-  color: @blue;
-  background:none;
-  box-shadow:none;
-  text-shadow:none;
+	color: @blue;
+	background:none;
+	box-shadow:none;
+	text-shadow:none;
 }
 
 .navbar .nav > li > a {
@@ -120,15 +135,16 @@ nav-collapse collapse {
 .navbar-simple .navbar-inner {
 //  #gradient > .vertical(@orange, @orange); 
 	background:none;
-	position:static;
-	min-height:60px;
-	line-height:60px;
-	right: 0;
-	left: 0;
-	box-shadow:none;
 	border:0;
-	ul.nav li {
+	box-shadow:none;
+	left: 0;
 	line-height:@headerHeight;
+	min-height:@headerHeight;
+	position:static;
+	right: 0;
+
+	ul.nav {
+		line-height: @headerHeight;
 	}
 }
 
@@ -138,44 +154,44 @@ nav-collapse collapse {
 }
 
 
-
 // NAVBAR STYLE "SIMPLE-FIXED", IS FIXED
 
-// Shared (top/bottom) styles
 .navbar-simple-fixed {
-  position: fixed;
-  right: 0;
-  left: 0;
-  z-index: @zindexFixedNavbar;
-  margin-bottom: 0; // remove 18px margin for default navbar
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: @zindexFixedNavbar;
+	margin-bottom: 0; // remove 18px margin for default navbar
 }
 .navbar-simple-fixed {
-  .navbar-inner {
-    border: 0;
-  }
+	.navbar-inner {
+		border: 0;
+	  }
 }
 .navbar-simple-fixed .navbar-inner {
-  padding-left:  0;
-  padding-right: 0;
-  .border-radius(0);
+	padding-left:  0;
+	padding-right: 0;
+	.border-radius(0);
 }
 
 // Reset container width
 // Required here as we reset the width earlier on and the grid mixins don't override early enough
+
 .navbar-simple-fixed .container {
-  #grid > .core > .span(@gridColumns);
+	#grid > .core > .span(@gridColumns);
 }
 
 // Fixed to top
 .navbar-simple-fixed {
-  top: 0;
+	top: 0;
 }
 .navbar-simple-fixed {
-  .navbar-inner {
-    .box-shadow(~"inset 0 -1px 0 rgba(0,0,0,.1), 0 1px 10px rgba(0,0,0,.1)");
-  }
+	.navbar-inner {
+		.box-shadow(~"inset 0 -1px 0 rgba(0,0,0,.1), 0 1px 10px rgba(0,0,0,.1)");
+	}
 }
 
+///////////////////////////
 // FRONTPAGE HERO ELEMENT
 // Set min-width to hero on frontpage
 
@@ -318,8 +334,11 @@ hr.soften {
   border: 0;
 }
 
-// JUMBOTRON ELEMENT
+///////////////////////
+// JUMBOTRON ELEMENT //
+///////////////////////
 // Base class
+
 
 .jumbotron {
   position: relative;
@@ -340,14 +359,21 @@ hr.soften {
      -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
           box-shadow: inset 0 3px 7px rgba(0,0,0,.2), inset 0 -3px 7px rgba(0,0,0,.2);
 }
-.jumbotron h1 {
-  font-size: @baseFontSize*4;
+.jumbotron.masthead h1 {
+  font-size: @baseFontSize*6;
   font-weight: bold;
   letter-spacing: -1px;
   line-height: 1;
 }
-.jumbotron p {
-  font-size: 24px;
+
+.jumbotron.masthead .subheading {
+  font-size: @baseFontSize*3;
+  font-weight: 200;
+  line-height: 1.25;
+}
+
+.jumbotron.masthead p {
+  font-size: @baseFontSize;
   font-weight: 300;
   line-height: @baseLineHeight * 1.5;
   margin-bottom: 30px;
@@ -425,8 +451,9 @@ hr.soften {
   opacity: .4;
 }
 
-
-// NIVOSLIDER 3.X TYPOGRAPHY DESIGN
+//////////////////////////////////////
+// NIVOSLIDER 3.X TYPOGRAPHY DESIGN //
+//////////////////////////////////////
 
 .theme-hoop-simple .nivo-caption {
     font-family: @headingsFontFamily;

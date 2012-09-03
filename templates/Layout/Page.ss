@@ -8,7 +8,9 @@
 
 	<article>
 
+		<% if RecordClassName != "Jumbotron" %>
 		<h1 class="pagename">$Title</h1>
+		<% end_if %>
 
 		$Content
 
