@@ -19,6 +19,10 @@
 	
 		</header>
 		
+		</div>
+		
+		<div class="row columns">
+		
 		<div class="span3"><section>$LeftColumn</section></div>
 	
 		<div class="span6"><section>$CenterColumn</section></div>

@@ -25,7 +25,7 @@
 
 	</div>
 	
-	<div class="row">
+	<div class="row columns">
 	
 		<div class="span6"><section>$Column1</section></div>
 

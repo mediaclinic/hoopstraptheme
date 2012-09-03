@@ -25,7 +25,7 @@
 
 	</div>
 	
-	<div class="row">
+	<div class="row columns">
 	
 		<div class="span8">$WideColumn</div>
 
