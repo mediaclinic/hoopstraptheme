@@ -61,7 +61,7 @@
 						
 						<% include Jumbotron %>
 							
-					<div class="container"> <!-- Content container starts here -->
+					<div class="container fixed"> <!-- Content container starts here -->
 								
 					$Layout
 			

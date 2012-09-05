@@ -1,4 +1,4 @@
-<div class="navbar navbar-simple">
+<div class="navbar navbar-simple-fixed">
 
 	<div class="navbar-inner">
     	
