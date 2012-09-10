@@ -1,22 +1,6 @@
-<div class="row subnav">
+<% if Menu(2) && RecordClassName != "LayoutHolder" %>
 
-	<% if $IsInsideHolder != Children %>
-
-		<div class="span12">
-
-			<ul class="nav nav-pills pull-right">
-		
-				<% loop Menu(2) %>
-		
-					<li class="$LinkingMode"><a href="$Link" title="Siirry $Title page">$MenuTitle</a></li>
-							  
-				<% end_loop %>
-		
-			</ul>
-
-		</div>
-
-	<% else_if $SliderHolder != Children %>	
+	<div class="row subnav">
 
 		<div class="span12">
 
@@ -24,14 +8,36 @@
 		
 				<% loop Menu(2) %>
 		
-					<li class="$LinkingMode"><a href="$Link" title="Siirry $Title page">$MenuTitle</a></li>
+					<li class="$LinkingMode"><a href="$Link" title="Siirry $Title.XML page">$MenuTitle.XML</a></li>
 							  
 				<% end_loop %>
 		
 			</ul>
-	
+
 		</div>
 
-	<% end_if %>
+	</div>
 
-</div>
+<% else_if Menu(2) && RecordClassName == "LayoutHolder" && Level(2) %>
+
+	<div class="row subnav">
+
+		<div class="span12">
+
+			<ul class="nav nav-pills pull-right">
+		
+				<% loop Menu(2) %>
+		
+					<li class="$LinkingMode"><a href="$Link" title="Siirry $Title.XML page">$MenuTitle.XML</a></li>
+							  
+				<% end_loop %>
+		
+			</ul>
+
+		</div>
+
+	</div>
+
+<% else %>
+
+<% end_if %>

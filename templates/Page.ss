@@ -43,25 +43,15 @@
 					
 					<% include SubNav %>
 		
-						<% if Level(3) %>
-				
-							<ul class="breadcrumb">
-					
-							<li>$Breadcrumbs</li>
-					
-							</ul>
-			
-						<% else_if $IsInsideHolder = true %>
-			
-						<% else %>
-		
-					<% end_if %>
+					<% include BreadCrumbs %>
 					
 					</div> <!-- Upper container ends here -->
 						
-						<% include Jumbotron %>
+						<% if $JumbotronActive = true %>
+							<% include Jumbotron %>
+						<% end_if %>
 							
-					<div class="container fixed"> <!-- Content container starts here -->
+					<div class="container"> <!-- Content container starts here -->
 								
 					$Layout
 			
