@@ -2,11 +2,40 @@
 
 <article>
 
-	<div class="row columns">
-	
-		<div class="span6"><section>$IntroductionCol1</section></div>
+	<div class="container">
 
-		<div class="span6"><section>$IntroductionCol2</section></div>
+		<div class="marketing">
+	
+			<section>
+
+				<h1>$Title</h1>
+				<p class="marketing-byline">$IntroductionTxt</p>
+
+			</section>
+		
+			<div class="row">
+			
+				<div class="span4">
+				
+					$IntroductionCol1
+				
+				</div>
+				
+				<div class="span4">
+	
+					$IntroductionCol2
+				
+				</div>
+	
+				<div class="span4">
+	
+					$IntroductionCol3
+				
+				</div>
+				
+			</div>
+		
+		</div>
 
 	</div>
 
@@ -14,9 +43,9 @@
 	
 		<div class="span3">
 			<section>
-				<dl class="featuredwrapper jumbotron">
+				<dl class="featuredwrapper">
 					<dd class="span3">
-						<div class="featured">	
+						<div>	
 		
 							<% if $Featured1Title %>
 								<h4 class="featuredtitle"><a href="$Link1Loc.Link">$Featured1Title</a></h4>
@@ -42,9 +71,9 @@
 	
 		<div class="span3">
 			<section>
-				<dl class="featuredwrapper jumbotron">
+				<dl class="featuredwrapper">
 					<dd class="span3">
-						<div class="featured">	
+						<div>	
 	
 							<% if $Featured2Title %>
 								<h4 class="featuredtitle"><a href="$Link2Loc.Link">$Featured2Title</a></h4>
@@ -70,9 +99,9 @@
 		
 		<div class="span3">
 			<section>
-				<dl class="featuredwrapper jumbotron">
+				<dl class="featuredwrapper">
 					<dd class="span3">
-						<div class="featured">	
+						<div>	
 	
 							<% if $Featured3Title %>
 								<h4 class="featuredtitle"><a href="$Link3Loc.Link">$Featured3Title</a></h4>
@@ -97,9 +126,9 @@
 
 		<div class="span3">
 			<section>
-				<dl class="featuredwrapper jumbotron">
+				<dl class="featuredwrapper">
 					<dd class="span3">
-						<div class="featured">	
+						<div>	
 
 							<% if $Featured4Title %>
 								<h4 class="featuredtitle"><a href="$Link4Loc.Link">$Featured4Title</a></h4>
