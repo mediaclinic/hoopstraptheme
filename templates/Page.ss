@@ -59,23 +59,9 @@
 	
 			</div> <!-- End UpperBackgroundFX -->
 
-		</div> <!-- End UpperBackground -->
-
-		<div id="FooterWrapper">   <!-- Design for Footer -->
-		
-			<footer class="footer">
+		</div> <!-- End UpperBackground -->			
 			
-				<div class="container">
-			
-					<% include Footer %>
-						
-					<% include Pageinfo %>		
-						
-				</div>
-				
-			</footer>
-			
-		</div> <!-- End FooterWrapper -->
+		<% include Footer %>	
 
 	</div> <!-- End PageBackground -->
 

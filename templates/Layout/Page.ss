@@ -8,7 +8,7 @@
 
 	<article>
 
-		<% if RecordClassName != "Jumbotron" %>
+		<% if $JumbotronActive = false %>
 
 			<h1 class="pagename">$Title</h1>
 	

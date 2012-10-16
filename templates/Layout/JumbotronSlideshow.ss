@@ -13,7 +13,7 @@
 
 			</section>
 		
-			<div class="row">
+			<div class="row" style="text-align: left;">
 			
 				<div class="span4">
 				

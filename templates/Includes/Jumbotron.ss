@@ -10,7 +10,7 @@
 	
 <% else_if RecordClassName == "JumbotronSlideshow" %>
 
-	<div class="jumbotron">
+	<div class="jumbotron" style="background: url('$JumbotronBackground.URL') no-repeat center center;">
 
 		<div class="container">
 	

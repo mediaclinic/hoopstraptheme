@@ -8,7 +8,7 @@
 		
 				<% loop Menu(2) %>
 		
-					<li class="$LinkingMode"><a href="$Link" title="Siirry $Title.XML page">$MenuTitle.XML</a></li>
+					<li class="$LinkingMode"><a href="$Link" title="$Title.XML page">$MenuTitle.XML</a></li>
 							  
 				<% end_loop %>
 		
@@ -28,7 +28,7 @@
 		
 				<% loop Menu(2) %>
 		
-					<li class="$LinkingMode"><a href="$Link" title="Siirry $Title.XML page">$MenuTitle.XML</a></li>
+					<li class="$LinkingMode"><a href="$Link" title="$Title.XML page">$MenuTitle.XML</a></li>
 							  
 				<% end_loop %>
 		
