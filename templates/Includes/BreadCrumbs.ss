@@ -1,6 +1,10 @@
 <% if Level(3) && $InsideLayoutHolder = false %>
 
-	<p> LEVEL 3 </p>
+	<ul class="breadcrumb">
+	
+		<li>$Breadcrumbs</li>
+	
+	</ul>
 
 <% else_if $InsideLayoutHolder = true && Level(3) && LinkOrSection == section %>
 	
@@ -17,7 +21,5 @@
 <% end_if %>
 
 <% if Level(3) && $InsideLayoutHolder = true %>
-
-<p>Ei Holderin sisällä jossa section ja siinä alasivuja</p>
 
 <% end_if %>
