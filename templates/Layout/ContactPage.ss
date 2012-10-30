@@ -60,9 +60,10 @@
 	<div class="row">
 	
 		<div class="span3">
+
 			<section>
 			
-			$Column1
+				$Column1
 
 			</section>
 
@@ -74,11 +75,11 @@
 
 			$FormColumn
 		
-			<% if Success %>
-				$SuccessMsg
-			<% else %>
-				$ContactForm
-			<% end_if %>
+				<% if Success %>
+					$SuccessMsg
+				<% else %>
+					$ContactForm
+				<% end_if %>
 			
 			</section>
 		
