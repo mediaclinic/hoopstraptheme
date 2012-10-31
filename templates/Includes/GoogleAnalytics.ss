@@ -1,11 +1,11 @@
-<% if $SiteConfig.GoogleAnalyticsID %>		
+<% if $SiteConfig.GoogleAnalyticsAccountID %>		
 
 	if(Director::isLive()){
 
 		<script type="text/javascript">
 	
 			  var _gaq = _gaq || [];
-			  _gaq.push(['_setAccount', '$SiteConfig.GoogleAnalyticsID']);
+			  _gaq.push(['_setAccount', '$SiteConfig.GoogleAnalyticsAccountID']);
 			  _gaq.push(['_trackPageview']);
 			
 			  (function() {
