@@ -14,11 +14,14 @@
 			
 			<header>		
 			
-				<% include Logo %>
-	
-			</header>
+				<div class="row">
 
-			<% include MainNav %>
+					<% include Logo %>
+					<% include MainNav %>
+
+				</div>
+
+			</header>
 			
 		</div>
 	
