@@ -1,4 +1,4 @@
-<% if Menu(2) && RecordClassName != "LayoutHolder" %>
+<% if Menu(2) && RecordClassName != "LayoutHolder" && LayoutHolder = false %>
 
 	<div class="row subnav">
 

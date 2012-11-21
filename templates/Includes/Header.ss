@@ -14,12 +14,8 @@
 			
 			<header>		
 			
-				<div class="row">
-
 					<% include Logo %>
 					<% include MainNav %>
-
-				</div>
 
 			</header>
 			

@@ -27,16 +27,17 @@
 	  }
 	
 	// Undo negative margin on featuredwrapper
-	
+		
 	.featuredwrapper {
 		margin-left: 0;
-	  }
+	}
 	
 	.featured {
-		width: 100%;
+		margin: 0 20px 0 -20px;
 	}
 	
 	// Negative indent the now static "fixed" navbar
+	.navbar-simple,
 	.navbar-simple-fixed {
 		margin-left: -20px;
 		margin-right: -20px;
@@ -52,7 +53,6 @@
 }
 @media (max-width: 480px) {
 
-
 }
 @media (max-width: 767px) {
 
@@ -61,10 +61,20 @@
 		padding-right: 10px;
 	  }
 
+	.navbar-simple {
+		margin-right: -20px;
+		margin-left: -20px;
+  }
+
+	.navbar .brandlogo {
+	}
+
 }
 @media (min-width: 768px) and (max-width: 979px) {
 
-
+	.navbar-simple .container {
+		width: 724px;
+	}
 
 }
 @media (max-width: 979px) {
@@ -74,10 +84,18 @@
 		margin-right: 0px;
 		}
 
-	.navbar-inner {
-		padding-left: 10px;
-		padding-right: 10px;
-	  }
+	.navbar-simple {
+		position: static;
+	}
+
+	.navbar-simple {
+		margin-bottom: 20px;
+	}
+	
+	.navbar-simple .navbar-inner {
+	}
+
+
 
 	
 	// COLLAPSIBLE NAVBAR
@@ -141,6 +159,10 @@
 }
 
 @media (min-width: 1200px) {
+
+	.navbar-simple .container {
+	width: 1170px;
+	}
 
 	// Slider and Hero elements margins
 	

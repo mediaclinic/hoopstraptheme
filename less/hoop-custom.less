@@ -70,7 +70,7 @@ aside {
 //////////////////////
 
 
-@headerHeight: 40px;
+@headerHeight: 30px;
 
 
 // MAIN IMAGES TO REAL SIZE
@@ -117,6 +117,10 @@ nav-collapse collapse {
 	margin-bottom: 1em;
 }
 
+.navbar-simple .btn-navbar {
+	margin-right: 15px;
+}
+
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
@@ -128,6 +132,7 @@ nav-collapse collapse {
 
 .navbar .nav > li > a {
 	text-shadow:none;
+	text-transform: uppercase;
 }
 
 .navbar .brand {
@@ -135,9 +140,15 @@ nav-collapse collapse {
 	text-shadow:none;
 }
 
+.navbar .brandlogo {
+	float: left;
+	width: 220px;
+}
+
 .navbar .brandlogo img {
+	background: #000;
 	border: none;
-	padding-left: 0;
+	padding: 10px;
 }
 
 .navbar-inner {
@@ -145,6 +156,10 @@ nav-collapse collapse {
 	}
 
 // NAVBAR STYLE "SIMPLE", NOT FIXED
+
+.navbar-simple {
+	margin-left: -20px;
+}
 
 .navbar-simple .navbar-inner {
 //  #gradient > .vertical(@orange, @orange); 
@@ -165,6 +180,10 @@ nav-collapse collapse {
 .navbar .nav {
 	float:right;
 	
+}
+
+.navbar-simple .container{
+	width: 940px;
 }
 
 
