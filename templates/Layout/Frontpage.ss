@@ -8,7 +8,7 @@
 
 				<hgroup>			
 
-					<div class="hero-unit frontpage"<% if $HeroBackgroundImage %>style="background: url($HeroBackgroundImage.URL) no-repeat 100% 50%";<% end_if %>>
+					<div class="hero-unit frontpage"<% if $HeroBackgroundImage %>style="background: url($HeroBackgroundImage.URL) no-repeat 100% 50%;"<% end_if %>>
 		
 							<h1 class="heropagename">$HeroTitle</h1>
 							<% if $Subtitle %><h2 class="herosubtitle">$Subtitle</h2><% end_if %>
