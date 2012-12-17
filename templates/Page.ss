@@ -35,26 +35,28 @@
 		
 			<div id="UpperBackgroundFX">   <!-- Used to design background till Footer with layer 2 -->
 	
-				<div class="container">
-			
-					<% include Top %>
+				<% include Top %>
 									
-					<% include Header %>
+				<% include Header %>
+
+				<div class="container add-padding">
 					
-					<% include SubNav %>
-		
-					<% include BreadCrumbs %>
-					
-					</div> <!-- Upper container ends here -->
-						
-						<% if $JumbotronActive = true %>
-							<% include Jumbotron %>
-						<% end_if %>
-							
-					<div class="container"> <!-- Content container starts here -->
-								
-					$Layout
+						<% include SubNav %>
 			
+						<% include BreadCrumbs %>
+				
+				</div> <!-- Upper container ends here -->
+						
+					<% if $JumbotronActive = true %>
+
+						<% include Jumbotron %>
+
+					<% end_if %>
+							
+				<div class="container add-padding"> <!-- Content container starts here -->
+								
+						$Layout
+		
 				</div> <!-- End container -->
 	
 			</div> <!-- End UpperBackgroundFX -->

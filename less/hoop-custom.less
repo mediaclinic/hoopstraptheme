@@ -15,7 +15,7 @@ body {
 
 #PageBackground {
 	display:block;
-	margin:0px auto 0px auto;
+	margin:0 auto;
 	min-height:100%;
 	min-width:100%;
 	padding:0;
@@ -25,10 +25,12 @@ body {
 
 #UpperBackground {
 	margin:0px auto 0px auto;
+	padding: 0;
 }
 
 #UpperBackgroundFX {
-	margin:0px auto 0px auto;
+	margin: -1px auto 0px auto;
+	padding: 0;
 }
 
 #FooterWrapper {
@@ -70,7 +72,7 @@ aside {
 //////////////////////
 
 
-@headerHeight: 30px;
+@headerHeight: 40px;
 
 
 // MAIN IMAGES TO REAL SIZE
@@ -124,7 +126,7 @@ nav-collapse collapse {
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
-	color: @blue;
+	color: @red;
 	background:none;
 	box-shadow:none;
 	text-shadow:none;
@@ -133,9 +135,11 @@ nav-collapse collapse {
 .navbar .nav > li > a {
 	text-shadow:none;
 	text-transform: uppercase;
+	text-weight: normal;
 }
 
 .navbar .brand {
+	margin-left: 0;
 	padding-left: 0;
 	text-shadow:none;
 }
@@ -152,20 +156,28 @@ nav-collapse collapse {
 }
 
 .navbar-inner {
-	padding-right: 0;
+	border: none;
+	padding-right: 0px;
+	padding-left: 0px;
 	}
+
+.navbar .container{
+	width: 940px;
+}
 
 // NAVBAR STYLE "SIMPLE", NOT FIXED
 
 .navbar-simple {
+	background: @navbarBackground;
 	margin-left: -20px;
 }
 
 .navbar-simple .navbar-inner {
-//  #gradient > .vertical(@orange, @orange); 
-	background:none;
-	border:0;
-	box-shadow:none;
+
+	#gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
+	border: 0px solid @navbarBorder;
+		.border-radius(@baseBorderRadius);
+		.box-shadow(0 0px 4px rgba(0,0,0,.065));
 	left: 0;
 	line-height:@headerHeight;
 	min-height:@headerHeight;
@@ -239,8 +251,23 @@ nav-collapse collapse {
 // Set min-width to hero on frontpage
 
 .hero-unit.frontpage {
-	min-height: 300px;
+	min-height: 250px;
 }
+
+///////////////////////////
+//   GOOGLE TYPOGRAPHY   //
+///////////////////////////
+
+h1 {
+	font-size: @baseFontSize * 4;
+	font-weight: 600;
+	letter-spacing: -1.5px;
+}
+
+h2 {
+	font-weight: 300;
+}
+
 
 ///////////////////////////
 // ADDITIONAL TYPOGRAPHY //
@@ -255,6 +282,10 @@ nav-collapse collapse {
 	font-size: 10px;
 	text-transform: uppercase;
 }
+
+///////////////////////////
+//  MARKETING TYPOGRAPHY //
+///////////////////////////
 
 .marketing {
 	text-align: center;
@@ -284,6 +315,18 @@ nav-collapse collapse {
 	font-weight: 300;
 	line-height: 25px;
 	color: @gray;
+}
+
+.marketing dl.elementRow {
+	display: block;
+}
+
+.marketing dt.elementRow {
+	display: inline;
+}
+
+.marketing dt.elementRow img{
+	display: inline;
 }
 
 .navbar .brand {

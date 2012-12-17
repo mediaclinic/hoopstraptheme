@@ -13,8 +13,13 @@
 <meta name="Publisher" content="YourName" />
 
 <link rel="shortcut icon" href="$ThemeDir/ico/favicon.ico" />
+<link rel="apple-touch-icon" href="$ThemeDir/ico/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="$ThemeDir/ico/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="$ThemeDir/ico/apple-touch-icon-114x114.png">
 
 <script src="$ThemeDir/js/modernizr.custom.54935.js"></script>
 
 <link rel="stylesheet/less" href="$ThemeDir/less/bootstrap.less">
 <script src="$ThemeDir/js/less-1.3.0.min.js"></script>
+
+<!-- <% require themedCSS(bootstrap) %> -->

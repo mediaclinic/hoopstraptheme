@@ -25,6 +25,11 @@
 		padding-left: 0px;
 		padding-right: 0px;
 	  }
+
+	container {
+		background-color: red;
+		padding: 0 20px;
+	}
 	
 	// Undo negative margin on featuredwrapper
 		
@@ -34,6 +39,7 @@
 	
 	.featured {
 		margin: 0 20px 0 -20px;
+		
 	}
 	
 	// Negative indent the now static "fixed" navbar
@@ -43,10 +49,6 @@
 		margin-right: -20px;
 	}
 	
-	.navbar .brand {
-		padding-left: 0;
-	}
-
 }
 @media (min-width: 768px) and (max-width: 979px) {
 
@@ -56,32 +58,38 @@
 }
 @media (max-width: 767px) {
 
-	.container {
-		padding-left: 10px;
-		padding-right: 10px;
-	  }
-
 	.navbar-simple {
 		margin-right: -20px;
 		margin-left: -20px;
-  }
+	}
+
+	.navbar .brand {
+		padding-left: 15px;
+	}
 
 	.navbar .brandlogo {
 	}
 
+	.navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+		margin: 0 auto;
+	}
+
+	.add-padding {
+
+		padding: 0 10px 0 10px;
+
+	}
+
+
 }
 @media (min-width: 768px) and (max-width: 979px) {
 
-	.navbar-simple .container {
-		width: 724px;
-	}
 
 }
 @media (max-width: 979px) {
 
 	#PageBackground {
 		padding-left: 0px;
-		margin-right: 0px;
 		}
 
 	.navbar-simple {
@@ -95,7 +103,13 @@
 	.navbar-simple .navbar-inner {
 	}
 
+	.navbar .container {
+		width: auto;
+	}
 
+	.navbar .brand {
+		margin: 0;
+	}
 
 	
 	// COLLAPSIBLE NAVBAR
@@ -172,15 +186,6 @@
 	
 	.slider-wrapper.theme-hoop-simple{
 		margin: 40px auto 0 auto;
-	}
-	
-	
-	
-	/* Makes menu text a bit bigger, when on big screen */
-	
-	.navbar .nav-simple .nav li a {
-	
-		font-size: 15px;
 	}
 	
 	/* Style subnavigation div to match better the MainNav div */

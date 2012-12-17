@@ -21,7 +21,7 @@
 
 .gmap3{
 	float: right;
-	margin: 20px auto;
+	margin: 0px auto;
 	border: 1px dashed #C0C0C0;
 	padding: 0;
 	width: 100%;

@@ -2,7 +2,7 @@
 
 	<% loop $GetLogo %>
 
-		<div class="span3">
+		<div class="brandlogo">
 								
 			<a class="brandlogo" href="">$Logo</a>
 
